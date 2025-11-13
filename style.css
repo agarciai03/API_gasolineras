@@ -1,0 +1,75 @@
+:root {
+    --rojo-principal: #d90429;
+    --rojo-oscuro: #a80321;
+    --fondo-claro: #f9f9f9;
+    --blanco: #fff;
+    --borde: #ddd;
+    --sombra-rojo: rgba(255, 0, 43, 0.651);
+    --texto-principal: #333;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background: var(--fondo-claro);
+    color: var(--texto-principal);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--rojo-principal);
+    text-align: center;
+    margin-top: 40px;
+}
+
+form#filtro-gasolineras {
+    background: var(--blanco);
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px var(--sombra-rojo);
+    border: 1px solid var(--rojo-principal);
+}
+
+form#filtro-gasolineras label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--rojo-principal);
+}
+
+form#filtro-gasolineras select,
+form#filtro-gasolineras input[type="checkbox"] {
+    margin: 10px;
+    width: 100%;
+    padding: 7px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--borde);
+}
+
+form#filtro-gasolineras button {
+    background: var(--rojo-principal);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+form#filtro-gasolineras button:hover {
+    background: var(--rojo-oscuro);
+}
+
+/*Para el javascript
+section#resultados {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 18px;
+    background: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px var(--sombra-rojo)
+}
+*/
