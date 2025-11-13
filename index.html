@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gasolineras España</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="" defer></script>
+</head>
+
+<main>
+    <h1>⛽ Gasolineras de España ⛽</h1>
+    <form id="filtro-gasolineras">
+        <label for="provincia">Provincia:</label>
+        <select id="provincia" name="provincia">
+            <option value="">Seleccionar</option>
+        </select>
+
+        <label for="municipio">Municipio:</label>
+        <select id="municipio" name="municipio" disabled>
+            <option value="">Seleccionar</option>
+        </select>
+
+        <label for="combustible">Tipo de Combustible:</label>
+        <select id="combustible" name="combustible">
+            <option value="">Seleccionar</option>
+        </select>
+
+        <div>
+            <input type="checkbox" name="abierta" id="abierta">
+            <label for="abierta">Gasolineras abiertas</label>
+        </div>
+
+        <button type="submit">Buscar</button>
+    </form>
+    <section id="resultados">
+    </section>
+</main>
+</body>
+
+</html>
