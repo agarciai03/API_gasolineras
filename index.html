@@ -8,34 +8,35 @@
     <script src="script.js" defer></script>
 </head>
 
-<main>
-    <h1>⛽ Gasolineras de España ⛽</h1>
-    <form id="filtro-gasolineras">
-        <label for="provincia">Provincia:</label>
-        <select id="provincia" name="provincia">
-            <option value="">Seleccionar</option>
-        </select>
+<body>
+    <main>
+        <h1>⛽ Gasolineras de España ⛽</h1>
+        <form id="filtro-gasolineras">
+            <label for="provincia">Provincia:</label>
+            <select id="provincia" name="provincia">
+                <option value="" disabled selected>Seleccionar</option>
+            </select>
 
-        <label for="municipio">Municipio:</label>
-        <select id="municipio" name="municipio" disabled>
-            <option value="">Seleccionar</option>
-        </select>
+            <label for="municipio">Municipio:</label>
+            <select id="municipio" name="municipio" disabled>
+                <option value="" disabled selected>Seleccionar</option>
+            </select>
 
-        <label for="combustible">Tipo de Combustible:</label>
-        <select id="combustible" name="combustible">
-            <option value="">Seleccionar</option>
-        </select>
+            <label for="combustible">Tipo de Combustible:</label>
+            <select id="combustible" name="combustible" disabled>
+                <option value="" disabled selected>Seleccionar</option>
+            </select>
 
-        <div>
-            <input type="checkbox" name="abierta" id="abierta">
-            <label for="abierta">Gasolineras abiertas</label>
-        </div>
+            <div>
+                <input type="checkbox" name="abierta" id="abierta">
+                <label for="abierta">Gasolineras abiertas</label>
+            </div>
 
-        <button type="submit">Buscar</button>
-    </form>
-    <section id="resultados">
-    </section>
-</main>
+            <button type="submit">Buscar</button>
+        </form>
+        <section id="resultados">
+        </section>
+    </main>
 </body>
 
 </html>
