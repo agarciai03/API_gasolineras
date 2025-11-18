@@ -39,13 +39,16 @@ form#filtro-gasolineras label {
     color: var(--rojo-principal);
 }
 
-form#filtro-gasolineras select,
-form#filtro-gasolineras input[type="checkbox"] {
+form#filtro-gasolineras select {
     margin: 10px;
     width: 100%;
     padding: 7px 8px;
     border-radius: 6px;
     border: 1px solid var(--borde);
+}
+
+form#filtro-gasolineras input[type="checkbox"] {
+    align-items: left;
 }
 
 form#filtro-gasolineras button {
@@ -63,7 +66,6 @@ form#filtro-gasolineras button:hover {
     background: var(--rojo-oscuro);
 }
 
-/*Para el javascript
 section#resultados {
     max-width: 700px;
     margin: 25px auto;
@@ -72,4 +74,3 @@ section#resultados {
     border-radius: 12px;
     box-shadow: 0 2px 10px var(--sombra-rojo)
 }
-*/
