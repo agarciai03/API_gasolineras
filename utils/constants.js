@@ -4,6 +4,6 @@ export const urlMunicipiosParcial = 'https://sedeaplicaciones.minetur.gob.es/Ser
 
 export const urlCombustiblesParcial = 'https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/Listados/ProductosPetroliferos/';
 
-export const urlGasolinerasParcial = 'https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestresHist/FiltroMunicipioProducto/';
+export const urlGasolinerasParcial = 'https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroMunicipioProducto/';
 
 export const urlGasolinerasFechaParcial = 'https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestresHist/FiltroMunicipioProducto/';
