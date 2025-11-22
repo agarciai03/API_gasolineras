@@ -11,7 +11,7 @@ const chkAbierta = document.getElementById('abierta');
 const form = document.getElementById('filtro-gasolineras');
 const resultadosDiv = document.getElementById('resultados');
 
-// cuando la pagina carga, rellenamos provincias y combustibles
+// cuando la pagina carga, rellenamos solo provincias
 document.addEventListener('DOMContentLoaded', async () => {
     const provincias = await cargarProvincias();
     provincias.forEach(provincia => {
@@ -21,25 +21,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         selectProvincia.appendChild(opcion);
     });
     selectProvincia.disabled = false;
-
-    //combustibles
-    const combustibles = await cargarCombustibles();
-    combustibles.forEach(combustible => {
-        const opcion = document.createElement('option');
-        opcion.value = combustible;
-        opcion.textContent = combustible;
-        selectCombustible.appendChild(opcion);
-    });
-    selectCombustible.disabled = false;
 });
 
-//rellenamos de nuevo los municipios
+// municipio y combustible solo se rellenan al haber elegido una provincia
+// si el usuario cambia la provincia, cargamos municipios Y combustibles de nuevo
 selectProvincia.addEventListener('change', async (event) => {
     selectMunicipio.innerHTML = '<option value="" disabled selected>Seleccionar</option>';
     selectMunicipio.disabled = true;
+    selectCombustible.innerHTML = '<option value="" disabled selected>Seleccionar</option>';
+    selectCombustible.disabled = true;
 
     const provinciaSeleccionada = event.target.value;
     if (provinciaSeleccionada) {
+        // cargamos municipios
         const municipios = await cargarMunicipios(provinciaSeleccionada);
         municipios.forEach(municipio => {
             const opcion = document.createElement('option');
@@ -48,6 +42,16 @@ selectProvincia.addEventListener('change', async (event) => {
             selectMunicipio.appendChild(opcion);
         });
         selectMunicipio.disabled = false;
+
+        // cargamos combustibles
+        const combustibles = await cargarCombustibles();
+        combustibles.forEach(combustible => {
+            const opcion = document.createElement('option');
+            opcion.value = combustible;
+            opcion.textContent = combustible;
+            selectCombustible.appendChild(opcion);
+        });
+        selectCombustible.disabled = false;
     }
 });
 
