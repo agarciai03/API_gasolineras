@@ -54,6 +54,8 @@ selectProvincia.addEventListener('change', async (event) => {
 //mostramos la lista de gasolineras
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    //oculto el container de resultados
+    resultadosDiv.hidden = true;
     resultadosDiv.innerHTML = 'Buscando...';
 
     const provincia = selectProvincia.value;
@@ -62,6 +64,9 @@ form.addEventListener('submit', async (event) => {
     const soloAbiertas = chkAbierta.checked;
 
     const lista = await buscarGasolineras({ provincia, municipio, combustible, soloAbiertas });
+
+    //se muestra cuando hay resultados
+    resultadosDiv.hidden = false;
 
     if (!lista || lista.length === 0) {
         resultadosDiv.innerHTML = 'No se encontraron gasolineras con ese filtro.';
