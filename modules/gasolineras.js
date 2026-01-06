@@ -35,8 +35,8 @@ export async function buscarGasolineras({ provincia, municipio, combustible, sol
             for (let clave in gasolinera) {
                 if (clave.toLowerCase().includes(combustible.toLowerCase())) {
                     if (gasolinera[clave] && gasolinera[clave].trim() !== "") {
-                        tiene = true;
-                    }
+                            tiene = true;
+                        }
                 }
             }
             return tiene;
